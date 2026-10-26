@@ -1,0 +1,17 @@
+name: Introducing needs
+
+on: push
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello World"
+
+  goodbye:
+    needs: hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say goodbye
+        run: echo "Goodbye!"

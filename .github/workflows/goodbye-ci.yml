@@ -1,0 +1,17 @@
+name: Introducing needs
+
+on: push 
+
+jobs:
+  hello:
+    runs-on: ubunutu-latest
+    steps:
+      - name: hello
+        run: echo "Hello World"
+
+  goodbye:
+    needs: hello
+    runs-on: ubunutu-latest
+    steps:
+      - name: goodbye
+        run: echo "Goodbye!!"
